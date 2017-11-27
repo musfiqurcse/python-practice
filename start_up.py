@@ -1,4 +1,4 @@
-
+import time
 # def test(collect):
 #     print(collect)
 
@@ -49,7 +49,28 @@
 
 # List, Tuple and Dictionary
 
-my_list = [99,45,32,65,1,101,31]
-my_list2 =  [34, 23, 67, 100, 88, 2]
-my_list.extend(my_list2)
-print(my_list.sort().reversed())
+# my_list = [99,45,32,65,1,101,31]
+# my_list2 =  [34, 23, 67, 100, 88, 2]
+# my_list.extend(my_list2)
+# print(my_list.sort().reversed())
+'''
+Start Learning List Comprehension.
+:return:
+'''
+
+# ======== List Comprehension ==============
+start_time = time.time()
+
+x = [i for i in range(5000000) if i >50000]
+my_list = [1,1,1,1,2,2,2,2,2,3,3,3,3,3,3]
+my_set = {y for y in my_list}
+print(my_set)
+# x =[]
+# for i in range(5000000):
+#     if i > 50000:
+#         x.append(i)
+# print(x)
+print("-----%s second ---"%(time.time() - start_time))
+
+
+
