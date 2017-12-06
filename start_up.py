@@ -2,7 +2,12 @@ import time
 # def test(collect):
 #     print(collect)
 
+"""
+    Before start coding
+    Tips1 : Try to be dry Coder(Don't Repeat Yourself)
+    Tips2  : Where Your code turns to Spaghetti, Use function to make more reusable
 
+"""
 # collection = []
 # # for i in range(1,10):
 # #     global collection
@@ -59,18 +64,70 @@ Start Learning List Comprehension.
 '''
 
 # ======== List Comprehension ==============
-start_time = time.time()
+# start_time = time.time()
 
-x = [i for i in range(5000000) if i >50000]
-my_list = [1,1,1,1,2,2,2,2,2,3,3,3,3,3,3]
-my_set = {y for y in my_list}
-print(my_set)
+# x = [i for i in range(5000000) if i >50000]
+# my_list = [1,1,1,1,2,2,2,2,2,3,3,3,3,3,3]
+# my_set = {y for y in my_list}
+# print(my_set)
 # x =[]
 # for i in range(5000000):
 #     if i > 50000:
 #         x.append(i)
 # print(x)
-print("-----%s second ---"%(time.time() - start_time))
+# print("-----%s second ---"%(time.time() - start_time))
+
+#========== Reading File =================
+
+# handle = open('myfile.txt','r')
+# for line in handle:
+#     print(line)
+# while True:
+#     data = handle.read(1024)
+#     print(data)
+#     if not data:
+#         break
+# handle.close()
+
+
+#========== Import Module  =================
+
+
+# from math import sqrt
+# print(sqrt(4))
+
+# def many(*args, **kwargs):
+#     print(args)
+#     print(kwargs)
+
+# a = 'Shibly'
+# b = 'Nomany'
+# many(a,b,name='key', job='programmer')
 
 
 
+#========== Function Module  =================
+
+'''
+ :params function with params or not run
+'''
+
+# def add(a=5 , b=10):
+#     print('===test==\n')
+#     print((a,b))
+#     pass
+
+# add(a=10,b=2)
+
+def function_a():
+    global a
+    a  = 1
+    b = 2
+    return a+b
+
+def function_b():
+    c=10
+    return a+c
+
+print(function_a())
+print(function_b())
