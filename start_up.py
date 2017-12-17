@@ -119,15 +119,16 @@ Start Learning List Comprehension.
 
 # add(a=10,b=2)
 
-def function_a():
-    global a
-    a  = 1
-    b = 2
-    return a+b
+# def function_a():
+#     global a
+#     a  = 1
+#     b = 2
+#     return a+b
 
-def function_b():
-    c=10
-    return a+c
+# def function_b():
+#     c=10
+#     return a+c
 
-print(function_a())
-print(function_b())
+# print(function_a())
+# print(function_b())
+
