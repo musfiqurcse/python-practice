@@ -88,7 +88,23 @@ Start Learning List Comprehension.
 #     if not data:
 #         break
 # handle.close()
-
+handle = open('file.txt','r')
+list_item = []
+for line in handle:
+    main = line.split()[0].split(',')
+    list_item.append({
+        "lat":float(main[1]),
+        "lng": float(main[0])}
+        )
+output = open('myfile.txt','w')
+output.write(str(list_item))
+output.close()
+# while True:
+#     data = handle.read(1024)
+#     print(data)
+#     if not data:
+#         break
+handle.close()
 
 #========== Import Module  =================
 
@@ -131,4 +147,18 @@ Start Learning List Comprehension.
 
 # print(function_a())
 # print(function_b())
+
+
+def odd_sieve(n):
+    if n < 3:
+        return []
+
+    sieve = [0] + [1] * (n //2 - 1)
+
+    for j in range(1, ceil(n ** 0.5) // 2):
+        if sieve[j]:
+            for i in range((2*j)*(j + 1), len(sieve), 2*j + 1):
+                sieve[i] = False
+
+    return [2] + [2*index + 1 for index, is_prime in enumerate(sieve) if is_prime]
 
